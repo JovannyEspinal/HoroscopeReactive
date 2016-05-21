@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02609D3F0EBB4714818979CB /* Pods_Horoscope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6037186E8B33AC1A2B0080C9 /* Pods_Horoscope.framework */; };
+		500E331B1CF11DC000687741 /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E331A1CF11DC000687741 /* DataValidator.swift */; };
 		50119EEC1CF119850044ECAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50119EEB1CF119850044ECAD /* AppDelegate.swift */; };
 		50119EEE1CF119850044ECAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50119EED1CF119850044ECAD /* ViewController.swift */; };
 		50119EF11CF119850044ECAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50119EEF1CF119850044ECAD /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2270260EEDCEDFDF6169FACA /* Pods-Horoscope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Horoscope.release.xcconfig"; path = "Pods/Target Support Files/Pods-Horoscope/Pods-Horoscope.release.xcconfig"; sourceTree = "<group>"; };
+		500E331A1CF11DC000687741 /* DataValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
 		50119EE81CF119850044ECAD /* Horoscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horoscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50119EEB1CF119850044ECAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50119EED1CF119850044ECAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		50119EF51CF119850044ECAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50119EF81CF119850044ECAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50119EFA1CF119850044ECAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6037186E8B33AC1A2B0080C9 /* Pods_Horoscope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Horoscope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FAE31D86511ECDCE4461A30 /* Pods-Horoscope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Horoscope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Horoscope/Pods-Horoscope.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02609D3F0EBB4714818979CB /* Pods_Horoscope.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B3ACB153D4D0BD71AE1B0A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE31D86511ECDCE4461A30 /* Pods-Horoscope.debug.xcconfig */,
+				2270260EEDCEDFDF6169FACA /* Pods-Horoscope.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		50119EDF1CF119850044ECAD = {
 			isa = PBXGroup;
 			children = (
 				50119EEA1CF119850044ECAD /* Horoscope */,
 				50119EE91CF119850044ECAD /* Products */,
+				3B3ACB153D4D0BD71AE1B0A0 /* Pods */,
+				6C4539FDB99C623EAD76DBE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +77,21 @@
 				50119EEB1CF119850044ECAD /* AppDelegate.swift */,
 				50119EED1CF119850044ECAD /* ViewController.swift */,
 				50119EEF1CF119850044ECAD /* Main.storyboard */,
+				500E331A1CF11DC000687741 /* DataValidator.swift */,
 				50119EF51CF119850044ECAD /* Assets.xcassets */,
 				50119EF71CF119850044ECAD /* LaunchScreen.storyboard */,
 				50119EFA1CF119850044ECAD /* Info.plist */,
 				50119EF21CF119850044ECAD /* Horoscope.xcdatamodeld */,
 			);
 			path = Horoscope;
+			sourceTree = "<group>";
+		};
+		6C4539FDB99C623EAD76DBE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6037186E8B33AC1A2B0080C9 /* Pods_Horoscope.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50119EFD1CF119850044ECAD /* Build configuration list for PBXNativeTarget "Horoscope" */;
 			buildPhases = (
+				A8A7BD012FB48B95F10FAEF9 /* Check Pods Manifest.lock */,
 				50119EE41CF119850044ECAD /* Sources */,
 				50119EE51CF119850044ECAD /* Frameworks */,
 				50119EE61CF119850044ECAD /* Resources */,
+				1BB78D96364BACFAA5418E6B /* Embed Pods Frameworks */,
+				041F9F0672EC429857BDCC7F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +163,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		041F9F0672EC429857BDCC7F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Horoscope/Pods-Horoscope-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB78D96364BACFAA5418E6B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Horoscope/Pods-Horoscope-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8A7BD012FB48B95F10FAEF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50119EE41CF119850044ECAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +218,7 @@
 			files = (
 				50119EF41CF119850044ECAD /* Horoscope.xcdatamodeld in Sources */,
 				50119EEE1CF119850044ECAD /* ViewController.swift in Sources */,
+				500E331B1CF11DC000687741 /* DataValidator.swift in Sources */,
 				50119EEC1CF119850044ECAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +330,7 @@
 		};
 		50119EFE1CF119850044ECAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAE31D86511ECDCE4461A30 /* Pods-Horoscope.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Horoscope/Info.plist;
@@ -262,6 +342,7 @@
 		};
 		50119EFF1CF119850044ECAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2270260EEDCEDFDF6169FACA /* Pods-Horoscope.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Horoscope/Info.plist;
@@ -290,6 +371,7 @@
 				50119EFF1CF119850044ECAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

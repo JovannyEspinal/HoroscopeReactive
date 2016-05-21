@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Horoscope" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,209 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S63-rf-IyT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkp-lo-JFl">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8yb-6N-xPg">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dk8-pp-8as">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ry-Lf-PhT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-3v-hEV">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OY2-qg-8hA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="unchecked">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Woman">
+                                            <attributes>
+                                                <color key="NSColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5X-7g-Tll">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="unchecked">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Man">
+                                            <attributes>
+                                                <color key="NSColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-xY-dPo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Check Your Horoscope"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jzh-z9-7Ub">
+                                <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="485563638.659226">
+                                    <!--2016-05-21 22:47:18 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f0P-xY-dPo" secondAttribute="bottom" constant="20" id="0Wr-OF-Gfa"/>
+                            <constraint firstItem="OY2-qg-8hA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="53e-el-8Y4"/>
+                            <constraint firstItem="dk8-pp-8as" firstAttribute="top" secondItem="Dkp-lo-JFl" secondAttribute="bottom" constant="8" id="EUI-MF-1YC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jzh-z9-7Ub" secondAttribute="trailing" constant="-20" id="G4J-h2-uth"/>
+                            <constraint firstItem="dk8-pp-8as" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H3h-O3-oli"/>
+                            <constraint firstItem="f0P-xY-dPo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LUb-ls-6LI"/>
+                            <constraint firstItem="6Ry-Lf-PhT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MGY-Fo-KEH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dk8-pp-8as" secondAttribute="trailing" id="NAm-NT-DYt"/>
+                            <constraint firstItem="8yb-6N-xPg" firstAttribute="top" secondItem="S63-rf-IyT" secondAttribute="bottom" constant="8" id="QC8-At-roY"/>
+                            <constraint firstItem="dk8-pp-8as" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QWm-DB-Fds"/>
+                            <constraint firstItem="S63-rf-IyT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TVP-nx-h0I"/>
+                            <constraint firstItem="jzh-z9-7Ub" firstAttribute="top" secondItem="t5X-7g-Tll" secondAttribute="bottom" constant="8" id="U8Y-f6-dIp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8yb-6N-xPg" secondAttribute="trailing" id="UHa-27-zm2"/>
+                            <constraint firstItem="t5X-7g-Tll" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X1O-ag-ves"/>
+                            <constraint firstItem="8yb-6N-xPg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XOj-0A-ter"/>
+                            <constraint firstItem="2EQ-3v-hEV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ydh-yu-qyB"/>
+                            <constraint firstItem="t5X-7g-Tll" firstAttribute="top" secondItem="2EQ-3v-hEV" secondAttribute="bottom" constant="8" id="Yf0-KG-I1C"/>
+                            <constraint firstItem="Dkp-lo-JFl" firstAttribute="top" secondItem="8yb-6N-xPg" secondAttribute="bottom" constant="8" id="a7P-n4-vOB"/>
+                            <constraint firstItem="S63-rf-IyT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cG1-Cd-w6d"/>
+                            <constraint firstItem="8yb-6N-xPg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hnC-3R-FZl"/>
+                            <constraint firstItem="OY2-qg-8hA" firstAttribute="top" secondItem="2EQ-3v-hEV" secondAttribute="bottom" constant="8" id="i95-74-bPq"/>
+                            <constraint firstItem="jzh-z9-7Ub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mRN-Vk-Jvl"/>
+                            <constraint firstItem="6Ry-Lf-PhT" firstAttribute="top" secondItem="dk8-pp-8as" secondAttribute="bottom" constant="8" id="mdC-EB-g07"/>
+                            <constraint firstItem="2EQ-3v-hEV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nO9-f1-ESc"/>
+                            <constraint firstItem="2EQ-3v-hEV" firstAttribute="top" secondItem="6Ry-Lf-PhT" secondAttribute="bottom" constant="8" id="uCD-JR-SzK"/>
+                            <constraint firstItem="Dkp-lo-JFl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zrb-gP-T8c"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="S63-rf-IyT"/>
+                                <exclude reference="Dkp-lo-JFl"/>
+                                <exclude reference="8yb-6N-xPg"/>
+                                <exclude reference="dk8-pp-8as"/>
+                                <exclude reference="6Ry-Lf-PhT"/>
+                                <exclude reference="2EQ-3v-hEV"/>
+                                <exclude reference="OY2-qg-8hA"/>
+                                <exclude reference="t5X-7g-Tll"/>
+                                <exclude reference="f0P-xY-dPo"/>
+                                <exclude reference="jzh-z9-7Ub"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="TVP-nx-h0I"/>
+                                <exclude reference="cG1-Cd-w6d"/>
+                                <exclude reference="QC8-At-roY"/>
+                                <exclude reference="UHa-27-zm2"/>
+                                <exclude reference="XOj-0A-ter"/>
+                                <exclude reference="hnC-3R-FZl"/>
+                                <exclude reference="a7P-n4-vOB"/>
+                                <exclude reference="zrb-gP-T8c"/>
+                                <exclude reference="EUI-MF-1YC"/>
+                                <exclude reference="H3h-O3-oli"/>
+                                <exclude reference="NAm-NT-DYt"/>
+                                <exclude reference="QWm-DB-Fds"/>
+                                <exclude reference="MGY-Fo-KEH"/>
+                                <exclude reference="mdC-EB-g07"/>
+                                <exclude reference="Ydh-yu-qyB"/>
+                                <exclude reference="nO9-f1-ESc"/>
+                                <exclude reference="uCD-JR-SzK"/>
+                                <exclude reference="X1O-ag-ves"/>
+                                <exclude reference="Yf0-KG-I1C"/>
+                                <exclude reference="G4J-h2-uth"/>
+                                <exclude reference="U8Y-f6-dIp"/>
+                                <exclude reference="mRN-Vk-Jvl"/>
+                                <exclude reference="53e-el-8Y4"/>
+                                <exclude reference="i95-74-bPq"/>
+                                <exclude reference="LUb-ls-6LI"/>
+                                <exclude reference="0Wr-OF-Gfa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="S63-rf-IyT"/>
+                                <include reference="Dkp-lo-JFl"/>
+                                <include reference="8yb-6N-xPg"/>
+                                <include reference="dk8-pp-8as"/>
+                                <include reference="6Ry-Lf-PhT"/>
+                                <include reference="2EQ-3v-hEV"/>
+                                <include reference="OY2-qg-8hA"/>
+                                <include reference="t5X-7g-Tll"/>
+                                <include reference="f0P-xY-dPo"/>
+                                <include reference="jzh-z9-7Ub"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="TVP-nx-h0I"/>
+                                <include reference="cG1-Cd-w6d"/>
+                                <include reference="QC8-At-roY"/>
+                                <include reference="UHa-27-zm2"/>
+                                <include reference="XOj-0A-ter"/>
+                                <include reference="hnC-3R-FZl"/>
+                                <include reference="a7P-n4-vOB"/>
+                                <include reference="zrb-gP-T8c"/>
+                                <include reference="EUI-MF-1YC"/>
+                                <include reference="H3h-O3-oli"/>
+                                <include reference="NAm-NT-DYt"/>
+                                <include reference="QWm-DB-Fds"/>
+                                <include reference="MGY-Fo-KEH"/>
+                                <include reference="mdC-EB-g07"/>
+                                <include reference="Ydh-yu-qyB"/>
+                                <include reference="nO9-f1-ESc"/>
+                                <include reference="uCD-JR-SzK"/>
+                                <include reference="X1O-ag-ves"/>
+                                <include reference="Yf0-KG-I1C"/>
+                                <include reference="G4J-h2-uth"/>
+                                <include reference="U8Y-f6-dIp"/>
+                                <include reference="mRN-Vk-Jvl"/>
+                                <include reference="53e-el-8Y4"/>
+                                <include reference="i95-74-bPq"/>
+                                <include reference="LUb-ls-6LI"/>
+                                <include reference="0Wr-OF-Gfa"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="checkHoroscopeButton" destination="f0P-xY-dPo" id="qn2-Tj-gDY"/>
+                        <outlet property="cityTextField" destination="2EQ-3v-hEV" id="sjw-dN-Dvw"/>
+                        <outlet property="datePicker" destination="jzh-z9-7Ub" id="e2v-5k-118"/>
+                        <outlet property="emailTextField" destination="dk8-pp-8as" id="dCx-ix-5gp"/>
+                        <outlet property="manButton" destination="t5X-7g-Tll" id="WMT-4l-to3"/>
+                        <outlet property="nameTextField" destination="8yb-6N-xPg" id="bg4-vT-5rf"/>
+                        <outlet property="womanButton" destination="OY2-qg-8hA" id="22Y-YH-RlC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69" y="413.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="unchecked" width="32" height="32"/>
+    </resources>
 </document>
