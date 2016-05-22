@@ -58,7 +58,20 @@ class ViewController: UIViewController {
             self.cityTextField.layer.borderColor = (color as! UIColor).CGColor
         }
         
-        RACSignal.combineLatest([nameSignal, emailSignal, citySignal])
+        let dateSignal = datePicker.rac_signalForControlEvents(.ValueChanged).startWith(datePicker).map { (input) -> AnyObject! in
+            let datePicker = input as! UIDatePicker
+            
+            return datePicker.date.timeIntervalSinceDate(NSDate(timeIntervalSinceNow: 0)) < 0
+        }
+        
+        dateSignal.map { (valid) -> AnyObject! in
+            return valid as! Bool ? UIColor.greenColor() : UIColor.clearColor()
+        }.skip(1).subscribeNext { (color) -> Void in
+            self.datePicker.layer.borderWidth = 1
+            self.datePicker.layer.borderColor = (color as! UIColor).CGColor
+        }
+        
+        RACSignal.combineLatest([nameSignal, emailSignal, citySignal, dateSignal])
             .and().subscribeNext { (valid) -> Void in
                 self.checkHoroscopeButton.enabled = valid as! Bool
             }
