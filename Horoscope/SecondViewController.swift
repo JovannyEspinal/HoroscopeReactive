@@ -22,5 +22,24 @@ class SecondViewController: UIViewController {
             .subscribeNextAs { (stepper: UIStepper) in
             self.imageHeight.constant = CGFloat(stepper.value)
         }
+        
+        let happinessSliderChannel = happinessSlider.rac_newValueChannelWithNilValue(0)
+        let happySwitchChannel = happySwitch.rac_newOnChannel()
+        
+        let happyChannelTerminal = happySwitchChannel.map { (value: AnyObject!) -> AnyObject! in
+            if let active = value.boolValue where active {
+                return 0.75
+            }
+            
+            return 0.25
+        }
+        
+        happyChannelTerminal.subscribe(happinessSliderChannel)
+        
+        let happinessChannelTerminal = happinessSliderChannel.map { (value: AnyObject!) -> AnyObject! in
+            return value != nil && value.doubleValue >= 0.5
+        }
+        
+        happinessChannelTerminal.subscribe(happySwitchChannel)
     }
 }
