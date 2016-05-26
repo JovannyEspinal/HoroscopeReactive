@@ -15,6 +15,7 @@
 		50119EF41CF119850044ECAD /* Horoscope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50119EF21CF119850044ECAD /* Horoscope.xcdatamodeld */; };
 		50119EF61CF119850044ECAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50119EF51CF119850044ECAD /* Assets.xcassets */; };
 		50119EF91CF119850044ECAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50119EF71CF119850044ECAD /* LaunchScreen.storyboard */; };
+		505669191CF772BF001CAF8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505669181CF772BF001CAF8C /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		50119EF51CF119850044ECAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50119EF81CF119850044ECAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50119EFA1CF119850044ECAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505669181CF772BF001CAF8C /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		6037186E8B33AC1A2B0080C9 /* Pods_Horoscope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Horoscope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAE31D86511ECDCE4461A30 /* Pods-Horoscope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Horoscope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Horoscope/Pods-Horoscope.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			children = (
 				50119EEB1CF119850044ECAD /* AppDelegate.swift */,
 				50119EED1CF119850044ECAD /* ViewController.swift */,
+				505669181CF772BF001CAF8C /* SecondViewController.swift */,
 				50119EEF1CF119850044ECAD /* Main.storyboard */,
 				500E331A1CF11DC000687741 /* DataValidator.swift */,
 				50119EF51CF119850044ECAD /* Assets.xcassets */,
@@ -219,6 +222,7 @@
 				50119EF41CF119850044ECAD /* Horoscope.xcdatamodeld in Sources */,
 				50119EEE1CF119850044ECAD /* ViewController.swift in Sources */,
 				500E331B1CF11DC000687741 /* DataValidator.swift in Sources */,
+				505669191CF772BF001CAF8C /* SecondViewController.swift in Sources */,
 				50119EEC1CF119850044ECAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var checkHoroscopeButton: UIButton!
     
-    
+    let gender = MutableProperty<Bool?>(nil)
     
     
     override func viewDidLoad() {
@@ -71,11 +71,43 @@ class ViewController: UIViewController {
             self.datePicker.layer.borderColor = (color as! UIColor).CGColor
         }
         
-        RACSignal.combineLatest([nameSignal, emailSignal, citySignal, dateSignal])
+        let womanSignal = womanButton.rac_signalForControlEvents(.TouchUpInside).map { (signal) -> AnyObject! in
+            self.gender.value = false
+            
+            return true
+        }.startWith(false)
+        
+        let manSignal = manButton.rac_signalForControlEvents(.TouchUpInside).map { (signal) -> AnyObject! in
+            self.gender.value = true
+            
+            return true
+        }.startWith(false)
+        
+        let genderSignal = RACSignal.combineLatest([womanSignal, manSignal]).or()
+        
+        self.gender.producer.startWithNext { (newValue) in
+            switch newValue {
+            case nil:
+                self.womanButton.setImage(UIImage(named: "unchecked"), forState: .Normal)
+                self.manButton.setImage(UIImage(named: "unchecked"), forState: .Normal)
+            case .Some(true): // Man
+                self.womanButton.setImage(UIImage(named: "unchecked"), forState: .Normal)
+                self.manButton.setImage(UIImage(named: "checked"), forState: .Normal)
+            case .Some(false): // Woman
+                self.womanButton.setImage(UIImage(named: "checked"), forState: .Normal)
+                self.manButton.setImage(UIImage(named: "unchecked"), forState: .Normal)
+            }
+        }
+        
+        RACSignal.combineLatest([nameSignal, emailSignal, citySignal, dateSignal, genderSignal])
             .and().subscribeNext { (valid) -> Void in
                 self.checkHoroscopeButton.enabled = valid as! Bool
             }
         
+        checkHoroscopeButton.rac_signalForControlEvents(.TouchUpInside).subscribeNext { (button) -> Void in
+            let alertController = UIAlertController(title: "Horoscope", message: "You will have a wonderful day!", preferredStyle: .Alert)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
        
     
     }
