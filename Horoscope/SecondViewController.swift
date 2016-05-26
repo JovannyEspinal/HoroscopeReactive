@@ -19,8 +19,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         passionStepper.rac_signalForControlEvents(.ValueChanged)
-            .subscribeNext { (input: AnyObject!) in
-            let stepper = input as! UIStepper
+            .subscribeNextAs { (stepper: UIStepper) in
             self.imageHeight.constant = CGFloat(stepper.value)
         }
     }
